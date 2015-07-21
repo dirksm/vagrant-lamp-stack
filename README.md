@@ -8,7 +8,6 @@ The Vagrantfile:
 * makes the box accessable by the host at IP ```192.168.33.22```
 * syncs the current folder with ```/var/www/html``` inside the box (permanently, in both directions)
 * automatically perform all the commands in bootstrap.sh directly after setting up the box for the first time
-* fixes the missing mcrypt error in phpmyadmin
 
 bootstrap.sh holds your chosen password and your chosen project folder name and does this:
 
@@ -17,6 +16,7 @@ bootstrap.sh holds your chosen password and your chosen project folder name and 
 * installs Apache 2.4, PHP 5.5, MySQL, PHPMyAdmin, git and Composer
 * sets the pre-chosen password for MySQL and PHPMyAdmin
 * activates mod_rewrite and add AllowOverride All to the vhost settings
+* fixes the missing mcrypt error in phpmyadmin
 
 ## Example
 * Clone this project to your workspace. 
