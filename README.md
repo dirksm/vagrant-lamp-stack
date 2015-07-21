@@ -44,5 +44,5 @@ To safely stop the box simply run the command:
 To destroy the box run:
 ```vagrant destroy```
 
-You can also reprovision the box by running:
+If you modify ```bootstrap.sh``` you can reprovision the box by running:
 ```vagrant provision```
