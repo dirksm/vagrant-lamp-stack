@@ -22,7 +22,8 @@ bootstrap.sh holds your chosen password and your chosen project folder name and 
 * Clone this project to your workspace. 
 * Modify the ```PASSWORD``` variable in ```bootstrap.sh``` to your chosen root password. 
 * Modify the ```PROJECTFOLDER``` variable in ```bootstrap.sh``` to your chosen project name. 
-
+* Modify the ```config.vm.network "private_network", ip: "192.168.33.22"``` to your chosen IP address.
+** Make sure the IP address you choose is outside your network gateway (If your router address is 192.168.1.1, use an address outside of 192.168.1.*).
 
 To create a new virtual machine environment run:
 ```
