@@ -10,6 +10,14 @@ The Vagrantfile:
 * automatically perform all the commands in bootstrap.sh directly after setting up the box for the first time
 * fixes the missing mcrypt error in phpmyadmin
 
+bootstrap.sh holds your chosen password and your chosen project folder name and does this:
+
+* updates and upgrades Ubuntu 14.04 to the latest version and updates
+* creates the project folder inside /var/www/html
+* installs Apache 2.4, PHP 5.5, MySQL, PHPMyAdmin, git and Composer
+* sets the pre-chosen password for MySQL and PHPMyAdmin
+* activates mod_rewrite and add AllowOverride All to the vhost settings
+
 ## Example
 * Clone this project to your workspace. 
 * Modify the ```PASSWORD``` variable in ```bootstrap.sh``` to your chosen root password. 
