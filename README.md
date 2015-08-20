@@ -1,4 +1,8 @@
-# Vagrant setup for Ubuntu 14.04, Apache, MySQL, and phpMyAdmin
+# Vagrant setup for Ubuntu 14.04, Apache, MySQL, phpMyAdmin, Oracle8, and Tomcat 7
+
+```
+Note: This has been updated to include Tomcat 7 running with Oracle 8
+```
 
 ## Description
 This project is a boilerplate for setting up a web server using [Vagrant](http://www.vagrantup.com). 
@@ -6,6 +10,7 @@ This project is a boilerplate for setting up a web server using [Vagrant](http:/
 The Vagrantfile:
 * sets up a Ubuntu 14.04 LTS 32bit box
 * makes the box accessable by the host at IP ```192.168.33.22```
+* makes Tomcat 7 accessible by the host at IP ```192.168.33.22:8080```
 * syncs the current folder with ```/var/www/html``` inside the box (permanently, in both directions)
 * automatically perform all the commands in bootstrap.sh directly after setting up the box for the first time
 
@@ -17,6 +22,8 @@ bootstrap.sh holds your chosen password and your chosen project folder name and 
 * sets the pre-chosen password for MySQL and PHPMyAdmin
 * activates mod_rewrite and add AllowOverride All to the vhost settings
 * fixes the missing mcrypt error in phpmyadmin
+* adds the Oracle8 JVM
+* installs and runs Tomcat7
 
 ## Example
 * Clone this project to your workspace. 

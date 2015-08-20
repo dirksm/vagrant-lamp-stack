@@ -67,10 +67,10 @@ sudo php5enmod mcrypt
 service apache2 restart
 
 # Install Oracle JDK
-sudo apt-get install oracle-java8-installer -y
+sudo apt-get -y install oracle-java8-installer
 export JAVA_HOME=/usr/lib/jvm/oracle_jdk8
 
 #install tomcat7
-sudo apt-get install tomcat7 -y
+sudo apt-get -y install tomcat7
 sudo service tomcat7 start
 
