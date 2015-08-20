@@ -1,5 +1,9 @@
 # Vagrant setup for Ubuntu 14.04, Apache, MySQL, and phpMyAdmin
 
+```
+Note: If you want Tomcat7 included, clone the tomcat branch
+```
+
 ## Description
 This project is a boilerplate for setting up a web server using [Vagrant](http://www.vagrantup.com). 
 
