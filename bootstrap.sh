@@ -7,6 +7,9 @@ PROJECTFOLDER='myproject'
 # create project folder
 sudo mkdir "/var/www/html/${PROJECTFOLDER}"
 
+# Add Oracle8 ppa to apt repository
+sudo apt-add-repository ppa:webupd8team/java
+
 # update / upgrade
 sudo apt-get update
 sudo apt-get -y upgrade
@@ -62,3 +65,12 @@ sudo php5enmod mcrypt
 
 # restart apache
 service apache2 restart
+
+# Install Oracle JDK
+sudo apt-get install oracle-java8-installer -y
+export JAVA_HOME=/usr/lib/jvm/oracle_jdk8
+
+#install tomcat7
+sudo apt-get install tomcat7 -y
+sudo service tomcat7 start
+
