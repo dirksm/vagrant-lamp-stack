@@ -1,0 +1,60 @@
+    #btn-close-modal {
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        color: #fff;
+    }
+    
+    #search input[type="text"] {
+        color: #000!important;
+        height: auto!important;
+        font-size: 80px!important;
+        text-align: center!important;
+        width: 100%;
+        color: #888;
+        font-size: 43px;
+        line-height: 43px;
+        position: relative;
+        padding: 0px!important;
+        background-color: #ffffff;
+        border: 1px solid #efefef;
+        transition: none;
+        -moz-transition: none;
+        -webkit-transition: none;
+        -o-transition: none;
+        box-shadow: none!important;
+        -moz-box-shadow: none!important;
+        -webkit-box-shadow: none!important;
+        -o-box-shadow: none!important;
+        font-family: 'Open Sans';
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    #search form {
+        width: 100%!important;
+        float: none!important;
+    }
+    /************************************ * Close button ************************************/
+    
+    #closebt-container {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .closebt {
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+        cursor: pointer;
+    }
+    
+    .closebt:hover {
+        transform: rotate(90deg);
+    }

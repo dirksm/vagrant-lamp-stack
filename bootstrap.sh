@@ -2,7 +2,7 @@
 
 # Use single quotes instead of double quotes to make it work with special-character passwords
 PASSWORD='12345678'
-PROJECTFOLDER='myproject'
+PROJECTFOLDER='search'
 
 # create project folder
 sudo mkdir "/var/www/html/${PROJECTFOLDER}"
@@ -32,6 +32,9 @@ sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/admin-pass password
 sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/app-pass password $PASSWORD"
 sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2"
 sudo apt-get -y install phpmyadmin
+
+# enable mod_proxy
+sudo a2enmod proxy proxy_http proxy_wstunnel
 
 # setup hosts file
 VHOST=$(cat <<EOF
