@@ -71,35 +71,10 @@
     <!-- Begin page content -->
     <div class="container">
         <div class="page-header">
-            <h1>Search Results</h1>
+            <h1>Search Results <span>for "<?php echo $_POST['q']?>"</span></h1>
         </div>
         <div id="search-result">
-        <div class="card-group">
-<?php
-    $q = $_POST['q'];
-    $url = "http://192.168.33.22:8080/webcrawler/search/www.mo1call.com/".$q;
-    $json = file_get_contents($url);
-    $data = json_decode($json, TRUE);
-
-    $card_item = 0;
-    foreach($data as $result) {
-        if ($card_item%3 == 0) {
-?>
-        </div>
-        <div class="card-group">
-<?php
-        }
-?>
-            <div class="card card-block">
-                <h4 class="card-title"><?php echo $result['title']?></h4>
-                <p class="card-text"><?php echo $result['text']?></p>
-                <a href="<?php echo $result['url']?>" class="card-link"><?php echo $result['url']?></a>
-            </div>
-<?php
-    $card_item++;
-    }
-?>
-        </div>
+            <div style="margin: 15px auto; text-align:center;"><img src="images/ajax-loader.gif"/></div>
         </div>
     </div>
     <div id="modal-02">
@@ -151,9 +126,7 @@
     });
     $('#search-form').on('submit', function() {
         console.log("Searching for " + $('#q').val());
-
         $('.closeBt').trigger('click');
-        return false;
     });
     </script>
 </body>

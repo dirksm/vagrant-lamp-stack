@@ -36,6 +36,18 @@
         width: 100%!important;
         float: none!important;
     }
+
+    h1 > span {
+        font-size: 20px;
+        line-height: 20px;
+        color: #888;
+        top: 0px;
+        position: relative;
+        text-transform: none;
+        font-family: 'Open Sans';
+        font-weight: 300;
+        padding-left: 10px;
+    }
     /************************************ * Close button ************************************/
     
     #closebt-container {
