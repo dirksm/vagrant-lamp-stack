@@ -6,15 +6,14 @@ function performSearch(q) {
         crossOrigin: 'true',
         success: function(data) {
             console.log('processing data...');
-            var dat = JSON.parse(data);
-            if (dat.length == 0) {
+            if (data.length == 0) {
                 $('#search-result').html("No Results Found...");
             } else {
                 var loop = 0;
-                var txt = '<div>' + dat.length + ' Results Found.</div>';
+                var txt = '<div>' + data.length + ' Results Found.</div>';
                 txt += '<div class="card-group">\n';
-                console.log(dat.length + " items found.");
-                $.each(dat, function(i, item) {
+                console.log(data.length + " items found.");
+                $.each(data, function(i, item) {
                     if (loop % 3 == 0) {
                         txt += '</div><div class="card-group">';
                     }
