@@ -41,12 +41,18 @@ function getCard(title, text, url) {
 function setupCards() {
     $('.card').each(function() {
         $(this).mouseover(function() {
-            $(this).css('background-color', '#f7f7f9');
+            $(this).css('background-color', '#f7f7fa');
             $(this).css('cursor', 'pointer');
             $(this).css('title', 'Visit ' + ($(this).find('h4').text()));
         });
         $(this).mouseout(function() {
             $(this).css('background-color', '#ffffff');
+        });
+        $(this).mousedown(function() {
+            $(this).addClass('card-pressed');
+        });
+        $(this).mouseup(function() {
+            $(this).removeClass('card-pressed');
         });
         $(this).click(function() {
             $(location).attr('href', $(this).find('a').attr('href'));
