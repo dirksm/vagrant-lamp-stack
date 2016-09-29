@@ -9,7 +9,6 @@
     <meta name="author" content="">
     <title>Test</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.ajax-cross-origin.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
@@ -78,7 +77,7 @@
             <div style="margin: 15px auto; text-align:center;"><img src="images/ajax-loader.gif"/></div>
         </div>
     </div>
-    <div id="modal-02">
+    <div id="modal-02" class="modal-02-off">
         <!--"THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID-->
         <div id="closebt-container" class="close-modal-02 close-animatedModal">
             <img class="closebt" src="images/closebt.svg" />

@@ -1,7 +1,7 @@
 function performSearch(q) {
     $.ajax({
         type: 'GET',
-        url: 'http://www.maddogtech.com/webcrawler/search/www.mo1call.com/' + q,
+        url: '/webcrawler/search/www.mo1call.com/' + q,
         dataType: 'json',
         crossOrigin: 'true',
         success: function(data) {
@@ -34,7 +34,7 @@ function performSearch(q) {
 
 
 function getCard(title, text, url) {
-    return '<div class="card card-block"><h4 class="card-title">' + title + '</h4><p class="card-text">' + text + '</p><a href="' + url + '" title="' + url + '" class="card-link">Visit Page</a></div>';
+    return '<div class="card card-block"><h4 class="card-title">' + title + '</h4><p class="card-text">' + text + '</p><a href="' + url + '" title="' + url + '" class="card-link">'+url+'</a></div>';
 }
 
 function setupCards() {
