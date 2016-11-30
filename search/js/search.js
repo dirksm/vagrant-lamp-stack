@@ -5,15 +5,16 @@ function performSearch(q) {
         dataType: 'json',
         crossOrigin: 'true',
         success: function(data) {
+            var json_obj = $.parseJSON(JSON.stringify(data));//parse JSON
             console.log('processing data...');
-            if (data.length == 0) {
+            if (json_obj.length == 0) {
                 $('#search-result').html("No Results Found...");
             } else {
                 var loop = 0;
-                var txt = '<div>' + data.length + ' Results Found.</div>';
+                var txt = '<div>' + json_obj.length + ' Results Found.</div>';
                 txt += '<div class="card-group">\n';
-                console.log(data.length + " items found.");
-                $.each(data, function(i, item) {
+                console.log(json_obj.length + " items found.");
+                $.each(json_obj, function(i, item) {
                     if (loop % 3 == 0) {
                         txt += '</div><div class="card-group">';
                     }

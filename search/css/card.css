@@ -230,6 +230,10 @@
     border-bottom-left-radius: .25rem
 }
 
+a.card-link {
+    overflow-wrap: break-word;
+}
+
 @media (min-width:544px) {
     .card-deck {
         display: table;
@@ -255,6 +259,7 @@
         width: 100%;
         table-layout: fixed;
         margin-bottom: 1.25rem;
+
     }
     .card-group .card {
         display: table-cell;
@@ -265,6 +270,7 @@
         -moz-box-shadow: 0 2px 2px #676767;
         -webkit-box-shadow: 0 2px 2px #676767;
         box-shadow: 0 2px 2px #676767;
+        overflow: auto; 
     }
     .card-group .card+.card {
         margin-left: 1.25rem;
